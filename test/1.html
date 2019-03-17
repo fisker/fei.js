@@ -1,0 +1,10 @@
+<script src="./lib/index.js"></script>
+<script>
+
+fetch('test/1.jpg').then(response => response.blob()).then(blob=>{
+console.log('old', blob)
+  fei(blob, {
+    maxSize: 200,
+  }).then(console.log)
+})
+</script>
