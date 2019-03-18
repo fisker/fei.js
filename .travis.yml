@@ -6,9 +6,9 @@ node_js:
 sudo: false
 cache: yarn
 before_install:
-  - npm install --global nyc codecov coveralls
+  - npm install --global codecov coveralls
 script:
-  - nyc yarn test
+  - yarn test
 after_script:
-  - nyc report --reporter=text-lcov | coveralls
-  - nyc report --reporter=text-lcov > coverage.lcov && codecov
+  - cat ./coverage/lcov.info | coveralls
+  # - nyc report --reporter=text-lcov > coverage.lcov && codecov

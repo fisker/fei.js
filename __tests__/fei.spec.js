@@ -14,24 +14,24 @@ import {
   DEFAULT_TRANSFORM,
 } from '../src/orientation/constants'
 
-window.Image.prototype.addEventListener = function(type, listener) {
-  if (type !== 'load') {
-    return
-  }
-  setTimeout(async () => {
-    const blob = dataURLToBlob(this.src)
-    const buffer = Buffer.from(await readAsArrayBuffer(blob))
-    const image = await bufferToImage(buffer)
-    'width,height,naturalWidth,naturalHeight'.split(',').forEach(prop => {
-      Object.defineProperty(this, prop, {
-        get() {
-          return image[prop]
-        },
-      })
-    })
-    listener()
-  })
-}
+// window.Image.prototype.addEventListener = function(type, listener) {
+//   if (type !== 'load') {
+//     return
+//   }
+//   setTimeout(async () => {
+//     const blob = dataURLToBlob(this.src)
+//     const buffer = Buffer.from(await readAsArrayBuffer(blob))
+//     const image = await bufferToImage(buffer)
+//     'width,height,naturalWidth,naturalHeight'.split(',').forEach(prop => {
+//       Object.defineProperty(this, prop, {
+//         get() {
+//           return image[prop]
+//         },
+//       })
+//     })
+//     listener()
+//   })
+// }
 
 function bufferToImage(buffer) {
   return new Promise(resolve => {
