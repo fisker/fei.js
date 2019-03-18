@@ -10,7 +10,21 @@ module.exports = {
       },
     ],
   ],
-  plugins: [
-    'babel-plugin-transform-async-to-promises'
-  ],
+  plugins: ['babel-plugin-transform-async-to-promises'],
+  env: {
+    test: {
+      presets: [
+        [
+          '@babel/env',
+          {
+            // debug: true,
+            exclude: [
+              'transform-typeof-symbol',
+              'transform-async-to-generator',
+            ],
+          },
+        ],
+      ],
+    },
+  },
 }

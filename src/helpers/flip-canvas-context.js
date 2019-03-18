@@ -1,8 +1,7 @@
 // https://github.com/buunguyen/exif-orient/blob/master/exif-orient.js
 function flip(context, {flipX, flipY}) {
   const {canvas} = context
-  const {width} = canvas
-  const {height} = canvas
+  const {width, height} = canvas
 
   const translateX = flipX ? width : 0
   const translateY = flipY ? height : 0

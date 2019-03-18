@@ -1,16 +1,16 @@
-import Promise from './promise'
-import Image from './image'
+import {Promise, Image} from './global-this'
 import revoke from './revoke-url'
 
 function loadImage(url) {
   return new Promise((resolve, reject) => {
-    const img = new Image()
-    img.src = url
-    img.addEventListener('load', () => {
+    const image = new Image()
+    image.src = url
+    image.addEventListener('load', () => resolve(image))
+    image.addEventListener('load', () => {
       revoke(url)
-      resolve(img)
+      resolve(image)
     })
-    img.addEventListener('error', reject)
+    image.addEventListener('error', reject)
   })
 }
 

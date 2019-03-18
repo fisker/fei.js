@@ -8,7 +8,9 @@
   "author": "fisker <lionkay@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rollup --config"
+    "dev": "rollup --config --watch",
+    "build": "rollup --config",
+    "test": "jest"
   },
   "config": {
     "commitizen": {
@@ -21,20 +23,25 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
-    "babel-plugin-transform-async-to-promises": "^0.8.6",
-    "core-js": "^2.6.5",
-    "promisify-file-reader": "^2.0.5",
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
     "@xwtec/eslint-config": "^3.7.0",
+    "babel-jest": "^24.5.0",
+    "babel-plugin-transform-async-to-promises": "^0.8.6",
+    "canvas": "^2.4.0",
+    "core-js": "^2.6.5",
     "cz-conventional-changelog-emoji": "^0.1.0",
     "eslint": "^5.15.2",
     "husky": "^1.3.1",
+    "jest": "^24.5.0",
+    "jest-environment-jsdom-thirteen": "^1.0.0",
+    "jsdom": "^14.0.0",
     "lint-staged": "^8.1.5",
     "markdownlint-cli": "^0.14.0",
     "np": "^4.0.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.16.4",
+    "promisify-file-reader": "^2.0.5",
     "rimraf": "^2.6.3",
     "rollup": "^1.6.0",
     "rollup-plugin-babel": "^4.3.2",

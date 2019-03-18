@@ -1,6 +1,7 @@
+import {CREATE_OBJECT_URL} from '../supports'
 import {URL} from './global-this'
 import {readAsDataURL} from './file-reader'
 
-const blobToUrl = URL ? URL.createObjectURL : readAsDataURL
+const toURL = CREATE_OBJECT_URL ? URL.createObjectURL : readAsDataURL
 
-export default blobToUrl
+export default toURL

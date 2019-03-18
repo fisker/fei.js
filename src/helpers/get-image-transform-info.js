@@ -1,7 +1,10 @@
 import getScaleSize from './get-image-scale-size'
-import {ORIENTATION_TRANSFORMS, DEFAULT_TRANSFORM} from '../constants'
+import {
+  ORIENTATION_TRANSFORMS,
+  DEFAULT_TRANSFORM,
+} from '../orientation/constants'
 
-function getImageTransformInfo(image, orientation, maxSize) {
+function transformInfo(image, orientation, maxSize) {
   const [flipX, flipY, degree] =
     ORIENTATION_TRANSFORMS[orientation - 1] || DEFAULT_TRANSFORM
   const rotated = Math.abs(degree) === 90
@@ -20,4 +23,4 @@ function getImageTransformInfo(image, orientation, maxSize) {
   return null
 }
 
-export default getImageTransformInfo
+export default transformInfo

@@ -1,8 +1,7 @@
 import hasOwn from './has-own'
 
 function forIn(obj, iteratee) {
-  let key
-  for (key in obj) {
+  for (const key in obj) {
     if (hasOwn(obj, key)) {
       iteratee.call(obj, obj[key], key, obj)
     }

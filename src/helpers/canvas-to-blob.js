@@ -11,4 +11,6 @@ function toDataURL(canvas, {type, quality}) {
   return blob
 }
 
-export default (CANVAS_TO_BLOB ? toBlob : toDataURL)
+const canvasToBlob = CANVAS_TO_BLOB ? toBlob : toDataURL
+
+export default canvasToBlob

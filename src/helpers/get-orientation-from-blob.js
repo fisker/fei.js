@@ -1,9 +1,9 @@
 import {readAsArrayBuffer} from './file-reader'
-import getOrientationFromBuffer from './get-orientation-from-buffer'
+import orientation from '../orientation'
 
 async function getOrientation(blob) {
   const buffer = await readAsArrayBuffer(blob)
-  return getOrientationFromBuffer(buffer)
+  return orientation(buffer)
 }
 
 export default getOrientation
