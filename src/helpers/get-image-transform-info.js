@@ -4,8 +4,8 @@ import {ORIENTATION_TRANSFORMS, DEFAULT_TRANSFORM} from '../constants'
 function getImageTransformInfo(image, orientation, maxSize) {
   const [flipX, flipY, degree] =
     ORIENTATION_TRANSFORMS[orientation - 1] || DEFAULT_TRANSFORM
-  var rotated = Math.abs(degree) === 90
-  var scale = getScaleSize(image, maxSize, rotated)
+  const rotated = Math.abs(degree) === 90
+  const scale = getScaleSize(image, maxSize, rotated)
 
   if (flipX || flipY || degree || scale !== 1) {
     return {

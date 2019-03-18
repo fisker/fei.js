@@ -1,11 +1,28 @@
 <script src="../lib/index.js"></script>
 <script>
-  fetch('1.jpg')
-    .then(response => response.blob())
-    .then(blob => {
-      console.log('old', blob)
-      fei(blob, {
-        maxSize: 300,
-      }).then(console.log)
-    })
+  const fixtures = [
+    'image_1.jpg',
+    'image_2.jpg',
+    'image_3.jpg',
+    'image_4.jpg',
+    'image_5.jpg',
+    'image_6.jpg',
+    'image_7.jpg',
+    'image_8.jpg',
+    'image_no_orientation.jpg',
+    'image_unknown_orientation.jpg',
+  ]
+
+  for (const image of fixtures) {
+    fetch('./fixture/' + image)
+      .then(response => response.blob())
+      .then(orignal => {
+        console.log('orignal', orignal)
+        fei(orignal, {
+          maxSize: 300,
+        }).then(processed => {
+          console.log('processed', processed)
+        })
+      })
+  }
 </script>

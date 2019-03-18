@@ -6,11 +6,11 @@ function loadImage(url) {
   return new Promise((resolve, reject) => {
     const img = new Image()
     img.src = url
-    img.onload = () => {
+    img.addEventListener('load', () => {
       revoke(url)
       resolve(img)
-    }
-    img.onerror = reject
+    })
+    img.addEventListener('error', reject)
   })
 }
 

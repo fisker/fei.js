@@ -1,4 +1,4 @@
-import document from './helpers/document'
+import {document} from './helpers/global-this'
 import isFunction from './helpers/is-function'
 
 const canvas = document.createElement('canvas')

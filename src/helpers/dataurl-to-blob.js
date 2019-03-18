@@ -1,17 +1,11 @@
-import atob from './atob'
-import Blob from './blob'
+import {atob, Uint8Array, Blob} from './global-this'
 
 function dataURLToBlob(data, type) {
-  var bin = atob(data.split(',')[1])
-  var length = bin.length
-  var arr = new Uint8Array(length)
+  const binary = atob(data.split(',')[1])
+  const array = Uint8Array.from(binary, byte => byte.charCodeAt(0))
 
-  forEach.call(bin, function(_, i) {
-    arr[i] = bin.charCodeAt(i)
-  })
-
-  return new Blob([arr], {
-    type: type,
+  return new Blob([array], {
+    type,
   })
 }
 

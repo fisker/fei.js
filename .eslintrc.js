@@ -22,4 +22,8 @@ module.exports = {
   rules: {},
   plugins: [],
   overrides: [],
+  globals: {
+    Uint8Array: false,
+    DataView: false,
+  },
 }

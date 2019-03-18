@@ -1,4 +1,4 @@
-import URL from './url'
+import {URL} from './global-this'
 
 function revoke(url) {
   try {

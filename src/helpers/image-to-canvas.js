@@ -1,11 +1,11 @@
-import document from './document'
+import {document} from './global-this'
 import flip from './flip-canvas-context'
 import rotate from './rotate-canvas-context'
 import getImageSize from './get-image-size'
 
 function imageToCanvas(image, {flipX, flipY, scale, rotated, degree}) {
-  var canvas = document.createElement('canvas')
-  var context = canvas.getContext('2d')
+  const canvas = document.createElement('canvas')
+  const context = canvas.getContext('2d')
 
   const {width: imageWidth, height: imageHeight} = getImageSize(image)
 
