@@ -7,6 +7,7 @@ import parseMaxSize from './helpers/parse-max-size'
 import getImageTransformInfo from './helpers/get-image-transform-info'
 import imageToCanvas from './helpers/image-to-canvas'
 import canvasToBlob from './helpers/canvas-to-blob'
+import {DEFAULT_MIME} from './constants'
 
 async function processor(blob, options) {
   options = {
@@ -16,7 +17,7 @@ async function processor(blob, options) {
 
   const maxSize = parseMaxSize(options)
 
-  const {type} = blob
+  const {type = DEFAULT_MIME} = blob || {}
 
   if (!isImage(type)) {
     return blob

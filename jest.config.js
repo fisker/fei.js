@@ -1,5 +1,6 @@
 module.exports = {
-  collectCoverage: true,
+  // collectCoverage: true,
+  collectCoverageFrom: ['src/**/*'],
   verbose: true,
   testRegex: ['__tests__/.*.spec.js$'],
   testEnvironment: 'jest-environment-jsdom-thirteen',
