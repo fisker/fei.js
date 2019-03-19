@@ -1,15 +1,12 @@
 import degreeToAngle from './degree-to-angle'
 
 // https://github.com/buunguyen/exif-orient/blob/master/exif-orient.js
-function rotate(context, {degree, rotated}) {
-  const {canvas} = context
-  const {width, height} = canvas
-
+function rotate({context, width, height, degree, rotate}) {
   context.translate(width / 2, height / 2)
   context.rotate(degreeToAngle(degree))
   context.translate(-width / 2, -height / 2)
 
-  if (rotated) {
+  if (rotate) {
     context.translate((width - height) / 2, -(width - height) / 2)
   }
 }

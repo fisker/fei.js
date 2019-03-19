@@ -11,6 +11,7 @@ const {
   isFinite,
   Promise,
   createImageBitmap,
+  OffscreenCanvas,
 } = globalThis
 const URL = globalThis.URL || globalThis.webkitURL
 
@@ -26,4 +27,5 @@ export {
   isFinite,
   Promise,
   createImageBitmap,
+  OffscreenCanvas,
 }

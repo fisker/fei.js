@@ -1,6 +1,6 @@
 import getImageSize from './get-image-size'
 
-function getScaleSize(image, maxSize, rotated) {
+function getScaleSize(image, maxSize, rotate) {
   let scale = 1
 
   if (!maxSize) {
@@ -11,7 +11,7 @@ function getScaleSize(image, maxSize, rotated) {
 
   let {width, height} = getImageSize(image)
 
-  if (rotated) {
+  if (rotate) {
     ;[width, height] = [height, width]
   }
 

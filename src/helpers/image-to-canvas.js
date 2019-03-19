@@ -1,35 +1,27 @@
-import {document} from './global-this'
-import flip from './flip-canvas-context'
-import rotate from './rotate-canvas-context'
+import flipContext from './flip-canvas-context'
+import rotateContext from './rotate-canvas-context'
 import getImageSize from './get-image-size'
+import createCanvas from './create-canvas'
 
-function toCanvas(image, {flipX, flipY, scale, rotated, degree}) {
-  const canvas = document.createElement('canvas')
-  const context = canvas.getContext('2d')
-
+function toCanvas(image, {flipX, flipY, scale, rotate, degree}) {
   const {width: imageWidth, height: imageHeight} = getImageSize(image)
 
-  const width = imageWidth * scale
-  const height = imageHeight * scale
+  const width = (rotate ? imageHeight : imageWidth) * scale
+  const height = (rotate ? imageWidth : imageHeight) * scale
 
-  canvas.width = rotated ? height : width
-  canvas.height = rotated ? width : height
+  const canvas = createCanvas(width, height)
+
+  const context = canvas.getContext('2d')
 
   if (flipX || flipY) {
-    flip(context, {
-      flipX,
-      flipY,
-    })
+    flipContext({context, width, height, flipX, flipY})
   }
 
   if (degree) {
-    rotate(context, {
-      degree,
-      rotated,
-    })
+    rotateContext({context, width, height, degree, rotate})
   }
 
-  context.drawImage(image, 0, 0, imageWidth, imageHeight, 0, 0, width, height)
+  context.drawImage(image, 0, 0, imageWidth * scale, imageHeight * scale)
 
   return canvas
 }
