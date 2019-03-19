@@ -1,6 +1,6 @@
 import {readFileSync} from 'fs'
-import getOrientation from '../src/orientation'
-import images from './shared/fixtures'
+import getOrientation from '../../src/orientation'
+import images from '../shared/fixtures'
 
 describe('jpeg image orientation', () => {
   for (const image of images) {

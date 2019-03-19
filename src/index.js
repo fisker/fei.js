@@ -15,15 +15,17 @@ async function processor(blob, options) {
     ...options,
   }
 
-  const maxSize = parseMaxSize(options)
-
   const {type = DEFAULT_MIME} = blob || {}
 
   if (!isImage(type)) {
     return blob
   }
 
-  const orientation = isJPEG(type) ? await getOrientation(blob) : 0
+  const maxSize = parseMaxSize(options)
+  const {fixOrientation} = options
+
+  const orientation =
+    fixOrientation && isJPEG(type) ? await getOrientation(blob) : 0
   const image = await blobToImage(blob)
   const transform = getImageTransformInfo(image, orientation, maxSize)
 

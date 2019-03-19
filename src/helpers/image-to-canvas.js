@@ -6,8 +6,13 @@ import createCanvas from './create-canvas'
 function toCanvas(image, {flipX, flipY, scale, rotate, degree}) {
   const {width: imageWidth, height: imageHeight} = getImageSize(image)
 
-  const width = (rotate ? imageHeight : imageWidth) * scale
-  const height = (rotate ? imageWidth : imageHeight) * scale
+  let [width, height] = [imageWidth, imageHeight].map(size =>
+    Math.floor(Math.max(1, size * scale))
+  )
+
+  if (rotate) {
+    ;[width, height] = [height, width]
+  }
 
   const canvas = createCanvas(width, height)
 

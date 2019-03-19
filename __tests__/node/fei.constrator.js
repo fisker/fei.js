@@ -2,13 +2,13 @@
  * @jest-environment jsdom-thirteen
  */
 
-import fei from '../src'
-import fixtures from './shared/fixtures'
-import feiAsBlob from './shared/fei-as-blob'
-import feiAsImage from './shared/fei-as-image'
+import fei from '../../src'
+import fixtures from '../shared/fixtures'
+import feiAsBlob from '../shared/fei-as-blob'
+import feiAsImage from '../shared/fei-as-image'
 
-const asBlob = feiAsBlob(fei)
 const asImage = feiAsImage(fei)
+const asBlob = feiAsBlob(fei)
 
 describe('lib', () => {
   test('fei is a function', () => {
@@ -31,27 +31,9 @@ describe('lib', () => {
   })
 })
 
-describe('options', () => {
-  test('options.maxSize = 100', async () => {
-    const {naturalWidth, naturalHeight} = await asImage(fixtures[0], {
-      maxSize: 100,
-    })
-    expect(naturalWidth).toBeLessThanOrEqual(100)
-    expect(naturalHeight).toBeLessThanOrEqual(100)
-  })
-
-  test('options.maxSize = [400, 300]', async () => {
-    const {naturalWidth, naturalHeight} = await asImage(fixtures[0], {
-      maxSize: [400, 300],
-    })
-    expect(naturalWidth).toBeLessThanOrEqual(400)
-    expect(naturalHeight).toBeLessThanOrEqual(300)
-  })
-})
-
 describe('should fix orientation', () => {
   fixtures.forEach(fixture => {
-    const {name, orientation, type} = fixture
+    const {name, orientation} = fixture
 
     if (!orientation) {
       return
