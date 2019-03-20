@@ -3281,6 +3281,11 @@ diff-sequences@^24.3.0:
   resolved "http://registry.npm.taobao.org/diff-sequences/download/diff-sequences-24.3.0.tgz#0f20e8a1df1abddaf4d9c226680952e64118b975"
   integrity sha1-DyDood8avdr02cImaAlS5kEYuXU=
 
+diff@4.0.1:
+  version "4.0.1"
+  resolved "http://registry.npm.taobao.org/diff/download/diff-4.0.1.tgz#0c667cb467ebbb5cea7f14f135cc2dba7780a8ff"
+  integrity sha1-DGZ8tGfru1zqfxTxNcwtuneAqP8=
+
 diffie-hellman@^5.0.0:
   version "5.0.3"
   resolved "http://registry.npm.taobao.org/diffie-hellman/download/diffie-hellman-5.0.3.tgz#40e8ee98f55a2149607146921c63e1ae5f3d2875"
@@ -5781,6 +5786,11 @@ joycon@^2.2.1:
   resolved "http://registry.npm.taobao.org/joycon/download/joycon-2.2.4.tgz#ac4119d2673dfaa89b41efe5d6d670208e348bc6"
   integrity sha1-rEEZ0mc9+qibQe/l1tZwII40i8Y=
 
+jpeg-buffer-orientation@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/jpeg-buffer-orientation/download/jpeg-buffer-orientation-1.0.0.tgz#644af85e85e1a914c3535701b17e5982b4345882"
+  integrity sha1-ZEr4XoXhqRTDU1cBsX5ZgrQ0WII=
+
 js-levenshtein@^1.1.3:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/js-levenshtein/-/js-levenshtein-1.1.6.tgz#c6cee58eb3550372df8deb85fad5ce66ce01d59d"
@@ -6253,6 +6263,21 @@ lodash.get@^4.4.2:
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
+lodash.hasin@4.5.2:
+  version "4.5.2"
+  resolved "http://registry.npm.taobao.org/lodash.hasin/download/lodash.hasin-4.5.2.tgz#f91e352378d21ef7090b9e7687c2ca35c5b4d52a"
+  integrity sha1-+R41I3jSHvcJC552h8LKNcW01So=
+
+lodash.isempty@4.4.0:
+  version "4.4.0"
+  resolved "http://registry.npm.taobao.org/lodash.isempty/download/lodash.isempty-4.4.0.tgz#6f86cbedd8be4ec987be9aaf33c9684db1b31e7e"
+  integrity sha1-b4bL7di+TsmHvpqvM8loTbGzHn4=
+
+lodash.isnil@4.0.0:
+  version "4.0.0"
+  resolved "http://registry.npm.taobao.org/lodash.isnil/download/lodash.isnil-4.0.0.tgz#49e28cd559013458c814c5479d3c663a21bfaa6c"
+  integrity sha1-SeKM1VkBNFjIFMVHnTxmOiG/qmw=
+
 lodash.kebabcase@^4.0.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.kebabcase/-/lodash.kebabcase-4.1.1.tgz#8489b1cb0d29ff88195cceca448ff6d6cc295c36"
@@ -6272,6 +6297,11 @@ lodash.merge@^4.6.1:
   version "4.6.1"
   resolved "http://registry.npm.taobao.org/lodash.merge/download/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
   integrity sha1-rcJdnLmbk5HFliTzefu6YNcRHVQ=
+
+lodash.omitby@4.6.0:
+  version "4.6.0"
+  resolved "http://registry.npm.taobao.org/lodash.omitby/download/lodash.omitby-4.6.0.tgz#5c15ff4754ad555016b53c041311e8f079204791"
+  integrity sha1-XBX/R1StVVAWtTwEExHo8HkgR5E=
 
 lodash.snakecase@^4.0.1:
   version "4.1.1"
@@ -6390,6 +6420,13 @@ lru-cache@^5.1.1:
   integrity sha1-HaJ+ZxAnGUdpXa9oSOhH8B2EuSA=
   dependencies:
     yallist "^3.0.2"
+
+magic-string@0.25.1:
+  version "0.25.1"
+  resolved "http://registry.npm.taobao.org/magic-string/download/magic-string-0.25.1.tgz#b1c248b399cd7485da0fe7385c2fc7011843266e"
+  integrity sha1-scJIs5nNdIXaD+c4XC/HARhDJm4=
+  dependencies:
+    sourcemap-codec "^1.4.1"
 
 magic-string@^0.25.1:
   version "0.25.2"
@@ -8149,7 +8186,7 @@ prettier@1.16.3:
   resolved "http://registry.npm.taobao.org/prettier/download/prettier-1.16.3.tgz#8c62168453badef702f34b45b6ee899574a6a65d"
   integrity sha1-jGIWhFO63vcC80tFtu6JlXSmpl0=
 
-prettier@^1.16.4:
+prettier@^1.0.0, prettier@^1.16.4:
   version "1.16.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
   integrity sha512-ZzWuos7TI5CKUeQAtFd6Zhm2s6EpAD/ZLApIhsF9pRvRtM1RFo61dM/4MSRUA0SuLugA/zgrZD8m0BaY46Og7g==
@@ -8204,10 +8241,10 @@ promise-inflight@^1.0.1:
   resolved "http://registry.npm.taobao.org/promise-inflight/download/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
 
-promisify-file-reader@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/promisify-file-reader/-/promisify-file-reader-2.0.5.tgz#c5e0e33d424cbca3393ff9bb9fe18be082de3f3d"
-  integrity sha512-YdnNfjLQY/DIP85NMGEJ956fqXU592HsfdAdEsl9Cvl6hnsoyK/LiLeJGpYYah1098mv1OzYLx+ndETGgwka7w==
+promisify-file-reader@^3.0.0:
+  version "3.0.0"
+  resolved "http://registry.npm.taobao.org/promisify-file-reader/download/promisify-file-reader-3.0.0.tgz#5b6ca1a324f902dc9622b1b739a73aa336d422ba"
+  integrity sha1-W2yhoyT5AtyWIrG3Oac6ozbUIro=
 
 prompts@^2.0.1:
   version "2.0.4"
@@ -8770,17 +8807,10 @@ right-pad@^1.0.1:
   resolved "https://registry.yarnpkg.com/right-pad/-/right-pad-1.0.1.tgz#8ca08c2cbb5b55e74dafa96bf7fd1a27d568c8d0"
   integrity sha1-jKCMLLtbVedNr6lr9/0aJ9VoyNA=
 
-rimraf@2.6.3, rimraf@^2.2.8, rimraf@^2.5.2, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2:
+rimraf@2.6.3, rimraf@^2.2.8, rimraf@^2.5.2, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2, rimraf@^2.6.3:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.3.tgz#b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab"
   integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
-  dependencies:
-    glob "^7.1.3"
-
-rimraf@^2.6.3:
-  version "2.6.3"
-  resolved "http://registry.npm.taobao.org/rimraf/download/rimraf-2.6.3.tgz#b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab"
-  integrity sha1-stEE/g2Psnz54KHNqCYt04M8bKs=
   dependencies:
     glob "^7.1.3"
 
@@ -8831,6 +8861,19 @@ rollup-plugin-node-resolve@^4.0.1:
     builtin-modules "^3.0.0"
     is-module "^1.0.0"
     resolve "^1.10.0"
+
+rollup-plugin-prettier@^0.6.0:
+  version "0.6.0"
+  resolved "http://registry.npm.taobao.org/rollup-plugin-prettier/download/rollup-plugin-prettier-0.6.0.tgz#3b53b4ac2def23f150f496cff9106f4042a4ade1"
+  integrity sha1-O1O0rC3vI/FQ9JbP+RBvQEKkreE=
+  dependencies:
+    diff "4.0.1"
+    lodash.hasin "4.5.2"
+    lodash.isempty "4.4.0"
+    lodash.isnil "4.0.0"
+    lodash.omitby "4.6.0"
+    magic-string "0.25.1"
+    prettier "^1.0.0"
 
 rollup-plugin-terser@^4.0.4:
   version "4.0.4"
@@ -9288,7 +9331,7 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-sourcemap-codec@^1.4.4:
+sourcemap-codec@^1.4.1, sourcemap-codec@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.4.tgz#c63ea927c029dd6bd9a2b7fa03b3fec02ad56e9f"
   integrity sha512-CYAPYdBu34781kLHkaW3m6b/uUSyMOC2R61gcYMWooeuaGtjof86ZA/8T+qVPPt7np1085CR9hmMGrySwEc8Xg==

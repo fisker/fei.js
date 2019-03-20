@@ -1,12 +1,24 @@
 import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import cjs from 'rollup-plugin-commonjs'
+import rollupPrettier from 'rollup-plugin-prettier'
 import filesize from 'rollup-plugin-filesize'
 import {terser} from 'rollup-plugin-terser'
+import prettier from 'prettier'
 
-const plugins = [resolve(), cjs(), babel(), filesize()]
+const prettierConfig = prettier.resolveConfig.sync(`src/index.js`)
 
-const minify = [...plugins, terser()]
+const commonPlugins = [resolve(), cjs(), babel(), filesize()]
+
+const plugins = [
+  ...commonPlugins,
+  rollupPrettier({
+    ...prettierConfig,
+    sourceMap: true,
+  }),
+]
+
+const minify = [...commonPlugins, terser()]
 
 const moduleName = 'fei'
 

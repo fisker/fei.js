@@ -1,10 +1,7 @@
 import getScaleSize from './get-image-scale-size'
 import parseMaxSize from './parse-max-size'
 
-import {
-  ORIENTATION_TRANSFORMS,
-  DEFAULT_TRANSFORM,
-} from '../orientation/constants'
+import {ORIENTATION_TRANSFORMS, DEFAULT_TRANSFORM} from '../constants'
 
 function transformInfo(image, orientation, maxSize) {
   const [flipX, flipY, degree] =
