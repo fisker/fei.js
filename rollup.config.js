@@ -14,7 +14,7 @@ const plugins = [
   ...commonPlugins,
   rollupPrettier({
     ...prettierConfig,
-    sourceMap: true,
+    sourcemap: true,
   }),
 ]
 
