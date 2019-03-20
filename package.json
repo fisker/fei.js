@@ -4,13 +4,25 @@
   "description": "image preprocessor",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
+  "browser": "lib/index.min.js",
+  "unpkg": "lib/index.min.js",
+  "jsdelivr": "lib/index.min.js",
   "repository": "git@github.com:fisker/fei.js.git",
   "author": "fisker <lionkay@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rollup --config",
-    "test-coverage": "jest --coverage",
     "dev": "poi --serve --watch --debug --open",
+    "build": "npm-run-all build:*",
+    "build:js": "rollup --config",
+    "build:demo": "poi --prod",
+    "build:fixture": "cp -r __tests__/fixture docs/fixture",
+    "dist": "npm-run-all dist:*",
+    "dist:npm": "np --yolo --no-yarn",
+    "clean": "rimraf docs lib",
+    "test-coverage": "jest --coverage",
+    "lint": "npm-run-all lint:*",
+    "lint:js": "eslint src/**/*.js --fix",
+    "release": "run-s clean lint build test dist",
     "test": "jest"
   },
   "config": {
@@ -21,6 +33,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "files": ["lib"],
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
@@ -50,6 +63,7 @@
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-filesize": "^6.0.1",
-    "rollup-plugin-node-resolve": "^4.0.1"
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-terser": "^4.0.4"
   }
 }

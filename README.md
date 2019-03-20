@@ -1,2 +1,0 @@
-# fei.js
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f1c92423809b450e871e4812581f8fe6)](https://app.codacy.com/app/fisker/fei.js?utm_source=github.com&utm_medium=referral&utm_content=fisker/fei.js&utm_campaign=Badge_Grade_Settings)

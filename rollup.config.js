@@ -2,21 +2,41 @@ import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import cjs from 'rollup-plugin-commonjs'
 import filesize from 'rollup-plugin-filesize'
+import {terser} from 'rollup-plugin-terser'
 
-import {main, module} from './package.json'
+const plugins = [resolve(), cjs(), babel(), filesize()]
 
-export default {
+const minify = [...plugins, terser()]
+
+const moduleName = 'fei'
+
+const builds = {
   input: 'src/index.js',
   output: [
+    // umd build
     {
-      file: main,
+      file: 'lib/index.js',
       format: 'umd',
-      name: 'fei',
+      name: moduleName,
+      sourcemap: true,
     },
+    // esm build
     {
-      file: module,
+      file: 'lib/index.mjs',
       format: 'esm',
+      sourcemap: true,
     },
   ],
-  plugins: [resolve(), cjs(), babel(), filesize()],
+  plugins,
 }
+
+const minifiedBuilds = {
+  ...builds,
+  output: builds.output.map(config => ({
+    ...config,
+    file: config.file.replace(/(\.m?js)$/, '.min$1'),
+  })),
+  plugins: minify,
+}
+
+export default [builds, minifiedBuilds]

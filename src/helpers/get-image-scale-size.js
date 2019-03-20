@@ -1,29 +1,24 @@
 import getImageSize from './get-image-size'
 
-function getScaleSize(image, maxSize, rotate) {
-  let scale = 1
-
-  if (!maxSize) {
-    return scale
+function scaleLength(length, maxLength) {
+  if (!maxLength || length < maxLength) {
+    return 1
   }
 
-  const {maxWidth, maxHeight} = maxSize
+  return maxLength / length
+}
 
+function getScaleSize(image, {maxWidth, maxHeight, rotate}) {
   let {width, height} = getImageSize(image)
 
   if (rotate) {
     ;[width, height] = [height, width]
   }
 
-  if (maxWidth && width > maxWidth) {
-    scale = Math.min(scale, maxWidth / width)
-  }
+  const scaleX = scaleLength(width, maxWidth)
+  const scaleY = scaleLength(height, maxHeight)
 
-  if (maxHeight && height > maxHeight) {
-    scale = Math.min(scale, maxHeight / height)
-  }
-
-  return scale
+  return Math.min(scaleX, scaleY, 1)
 }
 
 export default getScaleSize

@@ -19,11 +19,11 @@ function toCanvas(image, {flipX, flipY, scale, rotate, degree}) {
   const context = canvas.getContext('2d')
 
   if (flipX || flipY) {
-    flipContext({context, width, height, flipX, flipY})
+    flipContext(context, {width, height, flipX, flipY})
   }
 
   if (degree) {
-    rotateContext({context, width, height, degree, rotate})
+    rotateContext(context, {width, height, degree, rotate})
   }
 
   context.drawImage(image, 0, 0, imageWidth * scale, imageHeight * scale)
