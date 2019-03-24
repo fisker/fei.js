@@ -64,7 +64,7 @@
     "prettier": "^1.16.4",
     "promisify-file-reader": "^3.0.0",
     "rimraf": "^2.6.3",
-    "rollup": "^1.7.1",
+    "rollup": "^1.7.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-filesize": "^6.0.1",
