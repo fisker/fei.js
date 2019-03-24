@@ -1,6 +1,5 @@
-// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
+// eslint-disable-next-line import/no-extraneous-dependencies
 import orientation from 'jpeg-buffer-orientation'
-// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
 import {readAsArrayBuffer} from './file-reader'
 
 async function getOrientation(blob) {

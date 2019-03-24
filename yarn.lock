@@ -1339,20 +1339,6 @@
   resolved "http://registry.npm.taobao.org/@xtuc/long/download/@xtuc/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha1-0pHGpOl5ibXGHZrPOWrk/hM6cY0=
 
-"@xwtec/eslint-config@^3.8.1":
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/@xwtec/eslint-config/-/eslint-config-3.8.1.tgz#894234aaf257aba5eb884ffb4fa88abc7b0d18b7"
-  integrity sha512-DC5KJ1+k87aHDQSkRReVxFq+Y/raZei2lGCcbOHXwOQgd6faSnupsFlel+frhfVya9NSXUAhF6qrhcDeUVCCUQ==
-  dependencies:
-    eslint-config-airbnb-base "^13.1.0"
-    eslint-config-prettier "^4.1.0"
-    eslint-plugin-eslint-comments "^3.1.1"
-    eslint-plugin-import "^2.16.0"
-    eslint-plugin-prettier "^3.0.1"
-    eslint-plugin-promise "^4.0.1"
-    eslint-plugin-unicorn "^7.1.0"
-    eslint-plugin-vue "^5.2.2"
-
 JSONStream@^1.0.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-1.3.5.tgz#3208c1f08d3a4d99261ab64f92302bc15e111ca0"
@@ -3621,6 +3607,20 @@ eslint-config-airbnb-base@^13.1.0:
     eslint-restricted-globals "^0.1.1"
     object.assign "^4.1.0"
     object.entries "^1.0.4"
+
+eslint-config-fisker@^4.0.0:
+  version "4.0.0"
+  resolved "http://registry.npm.taobao.org/eslint-config-fisker/download/eslint-config-fisker-4.0.0.tgz#ffec32c97b6149a8182a70cfc9bab3a828ccbdaf"
+  integrity sha1-/+wyyXthSagYKnDPybqzqCjMva8=
+  dependencies:
+    eslint-config-airbnb-base "^13.1.0"
+    eslint-config-prettier "^4.1.0"
+    eslint-plugin-eslint-comments "^3.1.1"
+    eslint-plugin-import "^2.16.0"
+    eslint-plugin-prettier "^3.0.1"
+    eslint-plugin-promise "^4.0.1"
+    eslint-plugin-unicorn "^7.1.0"
+    eslint-plugin-vue "^5.2.2"
 
 eslint-config-prettier@^4.1.0:
   version "4.1.0"
