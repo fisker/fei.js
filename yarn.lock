@@ -8306,10 +8306,10 @@ promise-inflight@^1.0.1:
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
 
-promisify-file-reader@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/promisify-file-reader/-/promisify-file-reader-3.0.0.tgz#5b6ca1a324f902dc9622b1b739a73aa336d422ba"
-  integrity sha512-2tSpDWbeLb6zUWSy9BXyypD5wsIJvm5NoNbNS6+k+2UAIMZas0a5DOmdDdkHAA18jhQD5i8cn5y38w01oQE1zw==
+promisify-file-reader@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/promisify-file-reader/-/promisify-file-reader-3.0.3.tgz#5a99bd035dc6518e468e1bff987ffb2eb5fc5bf9"
+  integrity sha512-GYEXtIspN1Snjg9H1KbnSzoeAvbkPdBpPkeEM6wCdVy7OScnv8M9jc0GIk44b0dyninOtcels1UwwG+AmY1lHw==
 
 prompts@^2.0.1:
   version "2.0.4"
