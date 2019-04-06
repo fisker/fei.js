@@ -60,7 +60,7 @@
     "mem": "^4.3.0",
     "np": "^4.0.2",
     "npm-run-all": "^4.1.5",
-    "poi": "^12.6.2",
+    "poi": "^12.6.3",
     "prettier": "^1.16.4",
     "promisify-file-reader": "^3.0.3",
     "rimraf": "^2.6.3",
