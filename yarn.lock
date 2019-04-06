@@ -1133,10 +1133,10 @@
   dependencies:
     chalk "^2.4.1"
 
-"@poi/plugin-html-entry@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@poi/plugin-html-entry/-/plugin-html-entry-0.1.2.tgz#c0d92120f268e2780c627f18beda0814c6dccb93"
-  integrity sha512-0I5EMevIGVPJmzqDT2Fo9CZIhrqTsLRe/U8e/h2dmPoMH8/fP/OLmFFFytkSRBIvOkP4tHm04Yz0qpayQNbyrg==
+"@poi/plugin-html-entry@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@poi/plugin-html-entry/-/plugin-html-entry-0.1.3.tgz#8d0636b0e09e51350773b57d73a7dc0be55efd23"
+  integrity sha512-bl5cvCsQwP+C8XpUith5Q4kf2tjvgD+3jOFYmFiAwCjnSaO/lat9qTVEaBPgmf7V27P2XfmE+QEpfTYjdRFWsA==
   dependencies:
     chokidar "^2.0.4"
     fs-extra "^7.0.1"
@@ -7908,10 +7908,10 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-poi@^12.6.1:
-  version "12.6.1"
-  resolved "https://registry.yarnpkg.com/poi/-/poi-12.6.1.tgz#3f83d3cc8eccbdae3ac4b9f76a2570729ecacd36"
-  integrity sha512-ApiUAXz07VVNTxZVKhpzGocnkfU8CE7REtgEiqVPT0YcaOJEGsA5x1VnGrFKczRxuZ0LzAQNDb6XmqW7ilsRXA==
+poi@^12.6.2:
+  version "12.6.2"
+  resolved "https://registry.yarnpkg.com/poi/-/poi-12.6.2.tgz#694aa47838e2e64e2f1da3ad2cc4cec93266a32e"
+  integrity sha512-lSmgd/TbaGVjXGWx/+XfD4zc0izcZGFCYdebv0Ay/xQ41GDo14g3ulwDosDXjiRZSoVl9MDlFJhmgI/X8I8tCg==
   dependencies:
     "@babel/core" "^7.1.6"
     "@babel/plugin-proposal-class-properties" "^7.1.0"
@@ -7927,7 +7927,7 @@ poi@^12.6.1:
     "@intervolga/optimize-cssnano-plugin" "^1.0.6"
     "@poi/dev-utils" "^12.1.1"
     "@poi/logger" "^12.0.0"
-    "@poi/plugin-html-entry" "^0.1.2"
+    "@poi/plugin-html-entry" "^0.1.3"
     "@poi/pnp-webpack-plugin" "^0.0.2"
     babel-helper-vue-jsx-merge-props "^2.0.3"
     babel-loader "^8.0.4"
