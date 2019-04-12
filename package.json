@@ -61,7 +61,7 @@
     "np": "^4.0.2",
     "npm-run-all": "^4.1.5",
     "poi": "^12.6.4",
-    "prettier": "^1.16.4",
+    "prettier": "^1.17.0",
     "promisify-file-reader": "^3.0.3",
     "rimraf": "^2.6.3",
     "rollup": "^1.10.0",
