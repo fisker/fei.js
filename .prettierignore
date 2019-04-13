@@ -24,4 +24,5 @@ dist/**
 # project glob
 docs/**
 coverage/**
+.cache/**
 
