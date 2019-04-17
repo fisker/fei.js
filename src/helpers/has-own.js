@@ -1,7 +1,7 @@
 const {hasOwnProperty} = Object.prototype
 
-function hasOwn(obj, key) {
-  return obj && hasOwnProperty.call(obj, key)
+function hasOwn(object, key) {
+  return object && hasOwnProperty.call(object, key)
 }
 
 export default hasOwn

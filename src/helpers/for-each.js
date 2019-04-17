@@ -1,7 +1,7 @@
 const {forEach} = Array.prototype
 
-function each(obj, iteratee) {
-  return forEach.call(obj, iteratee)
+function each(object, iteratee) {
+  return forEach.call(object, iteratee)
 }
 
 export default each

@@ -1,9 +1,9 @@
 import hasOwn from './has-own'
 
-function forIn(obj, iteratee) {
-  for (const key in obj) {
-    if (hasOwn(obj, key)) {
-      iteratee.call(obj, obj[key], key, obj)
+function forIn(object, iteratee) {
+  for (const key in object) {
+    if (hasOwn(object, key)) {
+      iteratee.call(object, object[key], key, object)
     }
   }
 }
