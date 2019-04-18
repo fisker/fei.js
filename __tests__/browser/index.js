@@ -1,11 +1,11 @@
 import fei from '../../src'
 import fixtures from '../shared/fixtures'
 
-function loadImage(src) {
+function loadImage(source) {
   return new Promise(resolve => {
     const image = new window.Image()
     image.addEventListener('load', () => resolve(image))
-    image.src = src
+    image.src = source
   })
 }
 
@@ -42,6 +42,7 @@ for (const fixture of fixtures) {
     timeCell.textContent = `${(window.performance.now() - startTime).toFixed(
       2
     )}ms`
+    // eslint-disable-next-line node/no-unsupported-features/node-builtins
     const url = window.URL.createObjectURL(processed)
     const newImage = await loadImage(url)
     processedCell.appendChild(newImage)
