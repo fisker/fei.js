@@ -911,7 +911,7 @@
   dependencies:
     "@commitlint/config-conventional" "^7.5.0"
 
-"@fisker/eslint-config@^1.0.5", "@fisker/eslint-config@^1.0.7":
+"@fisker/eslint-config@^1.0.7":
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.0.7.tgz#612b52720159580d218675a2f57501899b10f95d"
   integrity sha512-1UUGF9ZgtVaBIUuL2aniKkf9V1/W4x1ivJzcgj3ERxD8JXrEkBaQRBGxvJ+sbKjxuwnGdjRF0UWNmI0vyo/OcA==
@@ -931,12 +931,10 @@
   resolved "https://registry.yarnpkg.com/@fisker/lint-staged-config/-/lint-staged-config-1.0.4.tgz#08206dd7ce02fccce83939fcf21ba2b774b5be36"
   integrity sha512-hzNU3DPo8SKCWKN4ew/6GZugxl2qihN6jOjQv3yvtOE1u+W2rXS8Wxjdoh4Nia4ggdEIqkNkWcGr8KzjzpFhEA==
 
-"@fisker/prettier-config@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@fisker/prettier-config/-/prettier-config-1.0.6.tgz#3bff2eae629fdfc75175b0b8f74e82691daca3a7"
-  integrity sha512-oCXejDEMEmyjMLiv8gjGjt881qXw7K5hi8PgLoPAhDx8sQzSbVMgedSRkx/6O50pm5WtdKNwrQ76iUA7eqWo9g==
-  dependencies:
-    "@fisker/eslint-config" "^1.0.5"
+"@fisker/prettier-config@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@fisker/prettier-config/-/prettier-config-1.0.11.tgz#58f413bb11665da02b7f508047021a047d255a90"
+  integrity sha512-nsmDfxyl3UpQK0vXDdjTW7ePVLlyOeJG1gzzgWGII/tPKnMK/YorxAn4DtvnexnTE6urSDiP6kdQL9WxJ8cP1Q==
 
 "@intervolga/optimize-cssnano-plugin@^1.0.6":
   version "1.0.6"
