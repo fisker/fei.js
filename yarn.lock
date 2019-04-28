@@ -7979,10 +7979,10 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-poi@^12.6.5:
-  version "12.6.5"
-  resolved "https://registry.yarnpkg.com/poi/-/poi-12.6.5.tgz#b1c7c26aeaf71338c63ded7347603b7095771af7"
-  integrity sha512-arlDxlBtjUE/gUjFyBghxG4wt5mCZGxNDkWvNXYgxYSR4UZzMzUzt1E2o6GweuvxpfbAiG+UfzgVLUJ+MrjKDA==
+poi@^12.6.6:
+  version "12.6.6"
+  resolved "https://registry.yarnpkg.com/poi/-/poi-12.6.6.tgz#35729159adbb705923ba3263679b4637c912462c"
+  integrity sha512-1ggsG6FxojyCVJk+SbUybOfHwDjnKxGohQAtgQaGLJpncjzlzZJ3spsOzSVn1IjJ+r2FVWH1WwMdZ352nLDNuQ==
   dependencies:
     "@babel/core" "^7.1.6"
     "@babel/plugin-proposal-class-properties" "^7.1.0"
