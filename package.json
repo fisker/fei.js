@@ -59,7 +59,7 @@
     "eslint": "^5.16.0",
     "eslint-config-fisker": "^4.5.0",
     "husky": "^2.2.0",
-    "jest": "^24.7.1",
+    "jest": "^24.8.0",
     "jest-environment-jsdom-thirteen": "^1.0.1",
     "jpeg-buffer-orientation": "^1.0.0",
     "jsdom": "^15.0.0",
