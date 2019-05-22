@@ -12,7 +12,7 @@ function toDataURL(canvas, {type, quality}) {
   return blob
 }
 
-function convertToBlob(canvas, options) {
+function convertOffscreenCanvasToBlob(canvas, options) {
   return canvas.convertToBlob(options)
 }
 
@@ -22,7 +22,7 @@ function canvasToBlob(canvas, options) {
   }
 
   if (SUPPORTS_OFFSCREEN_CANVAS && isFunction(canvas.convertToBlob)) {
-    return convertToBlob(canvas, options)
+    return convertOffscreenCanvasToBlob(canvas, options)
   }
 
   return toDataURL(canvas, options)
