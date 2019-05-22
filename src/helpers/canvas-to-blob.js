@@ -12,8 +12,8 @@ function toDataURL(canvas, {type, quality}) {
   return blob
 }
 
-function convertToBlob(canvas, {type, quality}) {
-  return canvas.convertToBlob(type, quality)
+function convertToBlob(canvas, options) {
+  return canvas.convertToBlob(options)
 }
 
 function canvasToBlob(canvas, options) {
