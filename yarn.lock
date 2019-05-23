@@ -5975,10 +5975,10 @@ joycon@^2.2.1:
   resolved "https://registry.yarnpkg.com/joycon/-/joycon-2.2.5.tgz#8d4cf4cbb2544d7b7583c216fcdfec19f6be1615"
   integrity sha512-YqvUxoOcVPnCp0VU1/56f+iKSdvIRJYPznH22BdXV3xMk75SFXhWeJkZ8C9XxUWt1b5x2X1SxuFygW1U0FmkEQ==
 
-jpeg-buffer-orientation@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/jpeg-buffer-orientation/-/jpeg-buffer-orientation-1.0.0.tgz#644af85e85e1a914c3535701b17e5982b4345882"
-  integrity sha512-Rtqsi3QzdZ4Z+WaACSlgKwpHqAHCVOlNfPeA8MwBWN40d+AUUGVavBO6GVCpCTfn4HO1548WKOz8+WKK4CzThQ==
+jpeg-buffer-orientation@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jpeg-buffer-orientation/-/jpeg-buffer-orientation-1.0.1.tgz#b6e2cc85cb16171f7787e68ac8957fde3c4ba7c1"
+  integrity sha512-6HqbecO5TQLHn0mS+FcdlAa44T2oC7fNxmFtwCZ4+DHWxvEDbPc2VHajsttxECATCEWmak83rkO5RG18fNke3Q==
 
 js-levenshtein@^1.1.3:
   version "1.1.6"
