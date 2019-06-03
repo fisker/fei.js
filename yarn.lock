@@ -3727,9 +3727,9 @@ eslint-plugin-jasmine@^2.10.1:
   integrity sha1-VzO3CedR9LxA4x4cFpib0s377Jc=
 
 eslint-plugin-jest@^22.4.1:
-  version "22.4.1"
-  resolved "http://registry.npm.taobao.org/eslint-plugin-jest/download/eslint-plugin-jest-22.4.1.tgz#a5fd6f7a2a41388d16f527073b778013c5189a9c"
-  integrity sha1-pf1veipBOI0W9ScHO3eAE8UYmpw=
+  version "22.6.4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.6.4.tgz#2895b047dd82f90f43a58a25cf136220a21c9104"
+  integrity sha512-36OqnZR/uMCDxXGmTsqU4RwllR0IiB/XF8GW3ODmhsjiITKuI0GpgultWFt193ipN3HARkaIcKowpE6HBvRHNg==
 
 eslint-plugin-mocha@^5.3.0:
   version "5.3.0"
