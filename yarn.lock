@@ -959,10 +959,10 @@
   dependencies:
     "@commitlint/config-conventional" "^8.0.0"
 
-"@fisker/eslint-config@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.1.0.tgz#bcb046d6979f35321b8c0c220b36edcb35e1a4ef"
-  integrity sha512-ZP9KBkSfYZxg18+nn4PH3A+tyfO/KpRalE/E10xn4nybIcqlJRMj6GUpZFZrL9lJVLagtYAQiGzZMYNy+iHO1w==
+"@fisker/eslint-config@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.1.1.tgz#19c04d7166515233fb8b6078449f51906ade87c1"
+  integrity sha512-AtufcWlBhosVHbe63cN6faM3oZMsUKzy+Llsjj17VL6GdhEfSq5/goPrbXq6qgQTYNc1zwpmalTOpa5RYIEHuA==
   dependencies:
     eslint-config-airbnb-base "^13.1.0"
     eslint-config-prettier "^4.3.0"
@@ -972,7 +972,7 @@
     eslint-plugin-node "^9.1.0"
     eslint-plugin-prettier "^3.1.0"
     eslint-plugin-promise "^4.1.1"
-    eslint-plugin-unicorn "^9.0.0"
+    eslint-plugin-unicorn "^9.1.0"
 
 "@fisker/lint-staged-config@^1.0.4":
   version "1.0.4"
@@ -3776,10 +3776,10 @@ eslint-plugin-unicorn@^8.0.2:
     reserved-words "^0.1.2"
     safe-regex "^2.0.1"
 
-eslint-plugin-unicorn@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-unicorn/-/eslint-plugin-unicorn-9.0.0.tgz#53e0a9043ad27f11f10846603915251d03584165"
-  integrity sha512-D0NbpmL6paSpwVrwdc/eePpp2KyPU9R+rEXKN+EjE8YqhELwF8wvixcpY5BenztzT2KZQiWWWyHfZmM9bTyRpA==
+eslint-plugin-unicorn@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-9.1.0.tgz#b5ec3c65ae28d8163f6f6b340b183e11862ec295"
+  integrity sha512-OknjtY1daSxHd60KsXBxP9d2LExA3JZ2XuPOtqSZbLjwGaKjZXYMCaPI2xg70Qc791rXoi0pW4UEzVCnwlRi+Q==
   dependencies:
     clean-regexp "^1.0.0"
     eslint-ast-utils "^1.0.0"
@@ -3790,6 +3790,7 @@ eslint-plugin-unicorn@^9.0.0:
     lodash.snakecase "^4.0.1"
     lodash.topairs "^4.3.0"
     lodash.upperfirst "^4.2.0"
+    regexpp "^2.0.1"
     reserved-words "^0.1.2"
     safe-regex "^2.0.1"
 
