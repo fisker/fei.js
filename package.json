@@ -16,20 +16,22 @@
   "license": "MIT",
   "scripts": {
     "dev": "poi --serve --watch --debug --open",
-    "build": "npm-run-all build:*",
+    "build": "run-p build:*",
     "build:js": "rollup --config",
     "build:demo": "poi --prod",
     "build:fixture": "cp -r __tests__/fixture docs/fixture",
-    "dist": "npm-run-all dist:*",
+    "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "clean": "rimraf docs lib",
-    "lint": "npm-run-all lint:*",
-    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint **/*.{js,mjs,vue}",
     "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
-    "release": "run-s clean lint build test prettier dist",
+    "release": "run-s clean lint build test format dist",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
+    "format": "run-p format:*",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
   },
   "config": {
     "commitizen": {
@@ -49,6 +51,7 @@
     "@commitlint/cli": "^8.0.0",
     "@fisker/commitlint-config": "^1.0.9",
     "@fisker/eslint-config": "^1.1.1",
+    "@fisker/husky-config": "^1.1.0",
     "@fisker/lint-staged-config": "^1.0.4",
     "@fisker/prettier-config": "^1.0.17",
     "babel-jest": "^24.8.0",
@@ -78,5 +81,6 @@
     "rollup-plugin-node-resolve": "^5.0.3",
     "rollup-plugin-prettier": "^0.6.0",
     "rollup-plugin-terser": "^5.0.0"
-  }
+  },
+  "sideEffects": false
 }
