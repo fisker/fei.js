@@ -3,7 +3,10 @@ import rotateContext from './rotate-canvas-context'
 import getImageSize from './get-image-size'
 import createCanvas from './create-canvas'
 
-function toCanvas(image, {flipX, flipY, scale, rotate, degree}) {
+function toCanvas(
+  image,
+  {flipX = false, flipY = false, scale = 1, rotate = false, degree = 0} = {}
+) {
   const {width: imageWidth, height: imageHeight} = getImageSize(image)
 
   let [width, height] = [imageWidth, imageHeight].map(size =>

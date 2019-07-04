@@ -14,13 +14,73 @@
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![MIT license](https://img.shields.io/github/license/fisker/fei.js.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
+## API
+
+### fei(input[, options])
+
+#### input
+
+Type: `Blob`
+
+#### options
+
+Type: `Object`
+
+Default value:
+
+```js
+{
+  always: false,
+  fixOrientation: true,
+  maxWidth: 1500,
+  maxHeight: 1500,
+  preferSmaller: false,
+}
+```
+
+##### options.always
+
+always process with canvas
+
+##### options.fixOrientation
+
+Type: `Boolean`
+
+detect `jpeg` orientation, and rotate if needed
+
+##### options.maxWidth
+
+Type: `Number`
+
+maxWidth of image, set to `Infinity` to disable
+
+##### options.maxHeight
+
+Type: `Number`
+
+maxHeight of image, set to `Infinity` to disable
+
+##### options.quality
+
+Type: `Number`
+
+`qualityArgument` for `HTMLCanvasElement#toBlob()`
+
+see: <https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob>
+
+##### options.preferSmaller
+
+Type: `Boolean`
+
+if no rotate and resize, compare original blob and result, returns smaller one
+
 ## Todo List
 
 - [x] allow skip Orientation fix, via `fixOrientation`
 - [x] support `OffscreenCanvas`
 - [x] `quality` test
-- [ ] support `options.always`
-- [ ] support `options.preferSmallerFile`
+- [x] support `options.always`
+- [x] support `options.preferSmaller`
 - [ ] support `options.quiet`
 - [ ] support `options.type`
 - [ ] support `Worker`

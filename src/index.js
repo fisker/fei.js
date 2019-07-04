@@ -10,42 +10,56 @@ import setDefaults from './helpers/set-defaults'
 import {DEFAULT_MIME} from './constants'
 import defaults from './defaults'
 
-async function processor(blob, options = {}) {
+async function processor(input, options = {}) {
   options = {
     ...defaults,
     ...options,
   }
 
-  const {type = DEFAULT_MIME} = blob || {}
+  const {type = DEFAULT_MIME} = input || {}
 
   if (!isImage(type)) {
-    return blob
+    return input
   }
 
-  const {fixOrientation, quality, maxSize} = options
+  const {
+    fixOrientation,
+    quality,
+    maxWidth,
+    maxHeight,
+    always,
+    preferSmaller,
+  } = options
 
   const orientation =
-    fixOrientation && isJPEG(type) ? await getOrientation(blob) : 0
-  const image = await blobToImage(blob)
+    fixOrientation && isJPEG(type) ? await getOrientation(input) : 0
+  const image = await blobToImage(input)
   const {width, height} = getImageSize(image)
 
   if (!width || !height) {
     // can't load image
-    return blob
+    return input
   }
 
-  const transform = getImageTransformInfo(image, orientation, maxSize)
-
-  if (!transform) {
-    // no need to transform
-    return blob
-  }
-
-  const canvas = imageToCanvas(image, transform)
-  const processed = await canvasToBlob(canvas, {
-    type,
-    quality,
+  const transform = getImageTransformInfo(image, {
+    maxWidth,
+    maxHeight,
+    orientation,
   })
+
+  let processed = input
+
+  if (transform || always || quality) {
+    const canvas = imageToCanvas(image, transform)
+    processed = await canvasToBlob(canvas, {
+      type,
+      quality,
+    })
+  }
+
+  if (!transform && preferSmaller && processed.size > input.size) {
+    return input
+  }
 
   return processed
 }

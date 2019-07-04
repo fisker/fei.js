@@ -1,11 +1,11 @@
 import getImageSize from './get-image-size'
+import {isFinite} from './global-this'
 
 function scaleLength(length, maxLength) {
-  if (!maxLength || length < maxLength) {
-    return 1
+  if (isFinite(maxLength) && maxLength >= 1) {
+    return maxLength / length
   }
-
-  return maxLength / length
+  return 1
 }
 
 function getScaleSize(image, {maxWidth, maxHeight, rotate}) {

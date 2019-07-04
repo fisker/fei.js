@@ -1,8 +1,7 @@
 export default {
   always: false,
-  quiet: true,
-  maxSize: 1500,
-  quality: undefined,
   fixOrientation: true,
-  // preferSmallerFile: false,
+  maxWidth: 1500,
+  maxHeight: 1500,
+  preferSmaller: true,
 }

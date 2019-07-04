@@ -1,13 +1,10 @@
 import getScaleSize from './get-image-scale-size'
-import parseMaxSize from './parse-max-size'
 
 import {ORIENTATION_TRANSFORMS, DEFAULT_TRANSFORM} from '../constants'
 
-function transformInfo(image, orientation, maxSize) {
+function transformInfo(image, {maxWidth, maxHeight, orientation}) {
   const [flipX, flipY, degree] =
     ORIENTATION_TRANSFORMS[orientation - 1] || DEFAULT_TRANSFORM
-
-  const {maxWidth, maxHeight} = parseMaxSize(maxSize)
 
   const rotate = Math.abs(degree) === 90
   const scale = getScaleSize(image, {
@@ -25,8 +22,6 @@ function transformInfo(image, orientation, maxSize) {
       scale,
     }
   }
-
-  return null
 }
 
 export default transformInfo

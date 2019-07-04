@@ -10,21 +10,35 @@ import feiAsBlob from '../shared/fei-as-blob'
 const asImage = feiAsImage(fei)
 const asBlob = feiAsBlob(fei)
 
-describe('options.maxSize', () => {
-  test('options.maxSize = 100', async () => {
-    const {naturalWidth, naturalHeight} = await asImage(fixtures[0], {
-      maxSize: 100,
+describe('options.maxWidth', () => {
+  test('options.maxWidth = 100', async () => {
+    const {naturalWidth} = await asImage(fixtures[0], {
+      maxWidth: 100,
     })
     expect(naturalWidth).toBeLessThanOrEqual(100)
+  })
+
+  test('options.maxWidth = Infinity', async () => {
+    const {naturalWidth} = await asImage(fixtures[0], {
+      maxWidth: Infinity,
+    })
+    expect(naturalWidth).toBeLessThanOrEqual(600)
+  })
+})
+
+describe('options.maxHeight', () => {
+  test('options.maxHeight = 100', async () => {
+    const {naturalHeight} = await asImage(fixtures[0], {
+      maxHeight: 100,
+    })
     expect(naturalHeight).toBeLessThanOrEqual(100)
   })
 
-  test('options.maxSize = [400, 300]', async () => {
-    const {naturalWidth, naturalHeight} = await asImage(fixtures[0], {
-      maxSize: [400, 300],
+  test('options.maxHeight = Infinity', async () => {
+    const {naturalHeight} = await asImage(fixtures[0], {
+      maxHeight: Infinity,
     })
-    expect(naturalWidth).toBeLessThanOrEqual(400)
-    expect(naturalHeight).toBeLessThanOrEqual(300)
+    expect(naturalHeight).toBeLessThanOrEqual(450)
   })
 })
 
@@ -56,15 +70,24 @@ describe('options.fixOrientation', () => {
 describe('options.quality', () => {
   test('options.quality', async () => {
     const {size: size1} = await asBlob(fixtures[0], {
-      maxSize: 300,
-      quality: 0.95,
+      quality: 1,
     })
 
     const {size: size2} = await asBlob(fixtures[0], {
-      maxSize: 300,
-      quality: 0.5,
+      quality: 0.2,
     })
 
     expect(size2).toBeLessThan(size1)
+  })
+})
+
+describe('options.always', () => {
+  test('options.always', async () => {
+    const {size: size1} = await asBlob(fixtures[0])
+    const {size: size2} = await asBlob(fixtures[0], {
+      always: true,
+    })
+
+    expect(size1).not.toEqual(size2)
   })
 })

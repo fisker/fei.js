@@ -13,6 +13,7 @@ const {
   createImageBitmap,
   OffscreenCanvas,
 } = globalThis
+
 const URL = globalThis.URL || globalThis.webkitURL
 
 export default globalThis
