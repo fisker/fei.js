@@ -12,10 +12,10 @@ const commonPlugins = [resolve(), cjs(), babel(), filesize()]
 
 const plugins = [
   ...commonPlugins,
-  rollupPrettier({
-    ...prettierConfig,
-    sourcemap: true,
-  }),
+  // rollupPrettier({
+  //   ...prettierConfig,
+  //   sourcemap: true,
+  // }),
 ]
 
 const minify = [...commonPlugins, terser()]
