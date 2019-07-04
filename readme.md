@@ -26,43 +26,33 @@ Type: `Blob`
 
 Type: `Object`
 
-Default value:
-
-```js
-{
-  always: false,
-  fixOrientation: true,
-  maxWidth: 1500,
-  maxHeight: 1500,
-  preferSmaller: false,
-}
-```
-
 ##### options.always
+
+Type: `Boolean`, Default: `false`
 
 always process with canvas
 
 ##### options.fixOrientation
 
-Type: `Boolean`
+Type: `Boolean`, Default: `true`
 
 detect `jpeg` orientation, and rotate if needed
 
 ##### options.maxWidth
 
-Type: `Number`
+Type: `Number`, Default: `1500`
 
 maxWidth of image, set to `Infinity` to disable
 
 ##### options.maxHeight
 
-Type: `Number`
+Type: `Number`, Default: `1500`
 
 maxHeight of image, set to `Infinity` to disable
 
 ##### options.quality
 
-Type: `Number`
+Type: `Number`, Default: `undefined`
 
 `qualityArgument` for `HTMLCanvasElement#toBlob()`
 
@@ -70,7 +60,7 @@ see: <https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob>
 
 ##### options.preferSmaller
 
-Type: `Boolean`
+Type: `Boolean`, Default: `false`
 
 if no rotate and resize, compare original blob and result, returns smaller one
 
@@ -81,6 +71,4 @@ if no rotate and resize, compare original blob and result, returns smaller one
 - [x] `quality` test
 - [x] support `options.always`
 - [x] support `options.preferSmaller`
-- [ ] support `options.quiet`
-- [ ] support `options.type`
 - [ ] support `Worker`

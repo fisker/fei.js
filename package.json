@@ -18,8 +18,6 @@
     "dev": "poi --serve --watch --debug --open",
     "build": "run-p build:*",
     "build:js": "rollup --config",
-    "build:demo": "poi --prod",
-    "build:fixture": "cp -r __tests__/fixture docs/fixture",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "clean": "rimraf docs lib",
@@ -64,15 +62,12 @@
     "husky": "^3.0.0",
     "jest": "^24.8.0",
     "jest-environment-jsdom-thirteen": "^1.0.1",
-    "jpeg-buffer-orientation": "^2.0.0",
     "jsdom": "^15.1.1",
     "lint-staged": "^9.0.2",
     "markdownlint-cli": "^0.17.0",
     "mem": "^5.1.1",
     "npm-run-all": "^4.1.5",
-    "poi": "^12.7.0",
     "prettier": "^1.18.2",
-    "promisify-file-reader": "^3.0.4",
     "rimraf": "^2.6.3",
     "rollup": "^1.16.4",
     "rollup-plugin-babel": "^4.3.3",
@@ -80,7 +75,9 @@
     "rollup-plugin-filesize": "^6.1.1",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-prettier": "^0.6.0",
-    "rollup-plugin-terser": "^5.1.0"
+    "rollup-plugin-terser": "^5.1.0",
+    "jpeg-buffer-orientation": "2.0.0",
+    "promisify-file-reader": "3.0.4"
   },
   "sideEffects": false
 }
