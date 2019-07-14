@@ -15,21 +15,22 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "poi --serve --watch --debug --open",
     "build": "run-p build:*",
     "build:js": "rollup --config",
+    "clean": "rimraf docs lib",
+    "dev": "poi --serve --watch --debug --open",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
-    "clean": "rimraf docs lib",
-    "lint": "run-p lint:*",
-    "lint:eslint": "eslint **/*.{js,mjs,vue}",
-    "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
-    "release": "run-s clean lint build test format dist",
-    "test": "jest",
-    "test-coverage": "jest --coverage",
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
+    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
+    "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
+    "release": "run-s clean lint build test format dist",
+    "test": "jest",
+    "test-coverage": "jest --coverage"
   },
   "config": {
     "commitizen": {
@@ -62,12 +63,14 @@
     "husky": "^3.0.0",
     "jest": "^24.8.0",
     "jest-environment-jsdom-thirteen": "^1.0.1",
+    "jpeg-buffer-orientation": "2.0.0",
     "jsdom": "^15.1.1",
     "lint-staged": "^9.2.0",
     "markdownlint-cli": "^0.17.0",
     "mem": "^5.1.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
+    "promisify-file-reader": "3.0.4",
     "rimraf": "^2.6.3",
     "rollup": "^1.16.7",
     "rollup-plugin-babel": "^4.3.3",
@@ -75,9 +78,7 @@
     "rollup-plugin-filesize": "^6.1.1",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-prettier": "^0.6.0",
-    "rollup-plugin-terser": "^5.1.1",
-    "jpeg-buffer-orientation": "2.0.0",
-    "promisify-file-reader": "3.0.4"
+    "rollup-plugin-terser": "^5.1.1"
   },
   "sideEffects": false
 }
