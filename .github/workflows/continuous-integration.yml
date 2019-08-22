@@ -3,8 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - "!dependabot/*"
-      - "!renovate/*"
+      - master
   pull_request:
 
 jobs:
@@ -61,9 +60,6 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: ${{ matrix.NODE }}
-
-      - name: Install nyc
-        run: npm install --global nyc
 
       - name: Install Dependencies
         run: yarn
