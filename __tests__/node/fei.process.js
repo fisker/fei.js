@@ -1,5 +1,5 @@
 /**
- * @jest-environment jsdom-fourteen
+ * @jest-environment jsdom-fifteen
  */
 
 import fei from '../../src'
