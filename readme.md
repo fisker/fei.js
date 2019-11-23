@@ -1,6 +1,6 @@
 # fei.js
 
-[![gzip size](http://img.badgesize.io/https://unpkg.com/fei.js/lib/index.min.mjs?compression=gzip&style=flat-square)](http://img.badgesize.io/https://unpkg.com/fei.js/lib/index.min.mjs)
+[![gzip size](http://img.badgesize.io/https://unpkg.com/fei.js/dist/index.min.mjs?compression=gzip&style=flat-square)](http://img.badgesize.io/https://unpkg.com/fei.js/dist/index.min.mjs)
 
 [![Travis](https://img.shields.io/travis/fisker/fei.js.svg?style=flat-square)](https://travis-ci.org/fisker/fei.js)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f1c92423809b450e871e4812581f8fe6)](https://app.codacy.com/app/fisker/fei.js?utm_source=github.com&utm_medium=referral&utm_content=fisker/fei.js&utm_campaign=Badge_Grade_Settings)
