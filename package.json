@@ -2,18 +2,22 @@
   "name": "fei.js",
   "version": "1.2.1",
   "description": "image preprocessor",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "browser": "dist/index.min.js",
-  "unpkg": "dist/index.min.js",
-  "jsdelivr": "dist/index.min.js",
   "repository": "git@github.com:fisker/fei.js.git",
+  "license": "MIT",
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
     "url": "https://www.fiskercheung.com/"
   },
-  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "jsdelivr": "dist/index.min.js",
+  "unpkg": "dist/index.min.js",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.min.js",
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
@@ -25,10 +29,12 @@
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
     "format:markdown": "yarn lint:markdown --fix",
+    "format:package-json": "sort-package-json \"package.json\" \"packages/*/package.json\"",
     "format:prettier": "yarn lint:prettier --write",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:package-json": "yarn run format:package-json --check",
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s clean lint build test format dist",
     "test": "jest",
@@ -39,13 +45,6 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
   "devDependencies": {
     "@babel/core": "7.7.4",
     "@babel/preset-env": "7.7.4",
@@ -81,7 +80,11 @@
     "rollup-plugin-filesize": "6.2.1",
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-prettier": "0.6.0",
-    "rollup-plugin-terser": "5.1.2"
+    "rollup-plugin-terser": "5.1.2",
+    "sort-package-json": "1.28.0"
   },
-  "sideEffects": false
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
