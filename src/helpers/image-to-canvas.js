@@ -9,7 +9,7 @@ function toCanvas(
 ) {
   const {width: imageWidth, height: imageHeight} = getImageSize(image)
 
-  let [width, height] = [imageWidth, imageHeight].map(size =>
+  let [width, height] = [imageWidth, imageHeight].map((size) =>
     Math.floor(Math.max(1, size * scale))
   )
 

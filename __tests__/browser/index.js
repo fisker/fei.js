@@ -2,7 +2,7 @@ import fei from '../../src'
 import fixtures from '../shared/fixtures'
 
 function loadImage(source) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     const image = new window.Image()
     image.addEventListener('load', () => resolve(image))
     image.src = source

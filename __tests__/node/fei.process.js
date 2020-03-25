@@ -32,7 +32,7 @@ describe('lib', () => {
 })
 
 describe('should fix orientation', () => {
-  fixtures.forEach(fixture => {
+  fixtures.forEach((fixture) => {
     const {name, orientation} = fixture
 
     if (!orientation) {

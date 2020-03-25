@@ -3,7 +3,7 @@ import dataURLToBlob from './dataurl-to-blob'
 import isFunction from './is-function'
 
 function toBlob(canvas, {type, quality}) {
-  return new Promise(resolve => canvas.toBlob(resolve, type, quality))
+  return new Promise((resolve) => canvas.toBlob(resolve, type, quality))
 }
 
 function toDataURL(canvas, {type, quality}) {

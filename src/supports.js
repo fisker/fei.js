@@ -12,7 +12,7 @@ export const SUPPORTS_REVOKE_OBJECT_URL =
 
 export const SUPPORTS_IMAGE_BITMAP = isFunction(createImageBitmap)
 
-export const SUPPORTS_OFFSCREEN_CANVAS = (OffscreenCanvas => {
+export const SUPPORTS_OFFSCREEN_CANVAS = ((OffscreenCanvas) => {
   if (!isFunction(OffscreenCanvas)) {
     return false
   }

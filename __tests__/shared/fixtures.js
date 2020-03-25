@@ -22,7 +22,7 @@ const fixtures = [
     orientation: null,
     type: 'image/png',
   },
-].map(fixture => ({
+].map((fixture) => ({
   ...fixture,
   file: join(fixtureDirectory, fixture.name),
 }))
