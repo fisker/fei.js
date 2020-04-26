@@ -9,17 +9,14 @@ const fixtures = [
   })),
   {
     name: `image_no_orientation.jpg`,
-    orientation: null,
     type: 'image/jpeg',
   },
   {
     name: `image_unknown_orientation.jpg`,
-    orientation: null,
     type: 'image/jpeg',
   },
   {
     name: `image_png.png`,
-    orientation: null,
     type: 'image/png',
   },
 ].map((fixture) => ({

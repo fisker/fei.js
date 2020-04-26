@@ -12,7 +12,7 @@ function loadImage(source) {
 const table = window.document.createElement('table')
 window.document.body.appendChild(table)
 table.innerHTML =
-  '<thead><tr><th>orignal</th><th>processed</th><th>time</th></tr></thead>'
+  '<thead><tr><th>original</th><th>processed</th><th>time</th></tr></thead>'
 const result = window.document.createElement('tbody')
 table.appendChild(result)
 
@@ -22,15 +22,15 @@ for (const fixture of fixtures) {
 
     const container = window.document.createElement('tr')
     result.appendChild(container)
-    const orignalCell = window.document.createElement('td')
-    container.appendChild(orignalCell)
+    const originalCell = window.document.createElement('td')
+    container.appendChild(originalCell)
     const processedCell = window.document.createElement('td')
     container.appendChild(processedCell)
     const timeCell = window.document.createElement('td')
     container.appendChild(timeCell)
 
     const image = await loadImage(file)
-    orignalCell.appendChild(image)
+    originalCell.appendChild(image)
 
     const response = await window.fetch(file)
     const blob = await response.blob()
