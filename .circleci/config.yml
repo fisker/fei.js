@@ -11,6 +11,10 @@ jobs:
       - checkout
 
       - run:
+          name: Install linux dependencies
+          command: bash <(curl -s -L https://github.com/fisker/scripts/raw/master/circleci/canvas-dependencies.sh)
+
+      - run:
           name: Install dependencies
           command: yarn
 
