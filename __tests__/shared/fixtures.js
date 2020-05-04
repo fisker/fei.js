@@ -8,15 +8,15 @@ const fixtures = [
     type: 'image/jpeg',
   })),
   {
-    name: `image_no_orientation.jpg`,
+    name: 'image_no_orientation.jpg',
     type: 'image/jpeg',
   },
   {
-    name: `image_unknown_orientation.jpg`,
+    name: 'image_unknown_orientation.jpg',
     type: 'image/jpeg',
   },
   {
-    name: `image_png.png`,
+    name: 'image_png.png',
     type: 'image/png',
   },
 ].map((fixture) => ({
