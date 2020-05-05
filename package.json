@@ -70,7 +70,7 @@
     "jpeg-buffer-orientation": "3.0.0",
     "jsdom": "16.2.2",
     "lint-staged": "10.2.2",
-    "markdownlint-cli": "0.22.0",
+    "markdownlint-cli": "0.23.0",
     "mem": "6.1.0",
     "npm-run-all": "4.1.5",
     "nyc": "15.0.1",
