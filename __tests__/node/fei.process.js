@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom-fifteen
- */
-
 import fei from '../../src'
 import fixtures from '../shared/fixtures'
 import feiAsBlob from '../shared/fei-as-blob'
