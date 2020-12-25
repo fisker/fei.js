@@ -58,7 +58,7 @@ describe('should fix orientation', () => {
 
   test('image_5.jpg should not reach width limit', async () => {
     const {naturalWidth, naturalHeight} = await asImage(fixtures[4], {
-      maxWidth: Infinity,
+      maxWidth: Number.POSITIVE_INFINITY,
       maxHeight: 450,
     })
     expect(`${naturalWidth}x${naturalHeight}`).toBe('600x450')

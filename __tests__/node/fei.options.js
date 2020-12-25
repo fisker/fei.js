@@ -16,7 +16,7 @@ describe('options.maxWidth', () => {
 
   test('options.maxWidth = Infinity', async () => {
     const {naturalWidth} = await asImage(fixtures[0], {
-      maxWidth: Infinity,
+      maxWidth: Number.POSITIVE_INFINITY,
     })
     expect(naturalWidth).toBeLessThanOrEqual(600)
   })
@@ -32,7 +32,7 @@ describe('options.maxHeight', () => {
 
   test('options.maxHeight = Infinity', async () => {
     const {naturalHeight} = await asImage(fixtures[0], {
-      maxHeight: Infinity,
+      maxHeight: Number.POSITIVE_INFINITY,
     })
     expect(naturalHeight).toBeLessThanOrEqual(450)
   })
