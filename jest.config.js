@@ -3,5 +3,7 @@ module.exports = {
   collectCoverageFrom: ['src/**/*'],
   verbose: true,
   testRegex: ['__tests__/node/.*.js'],
+  testEnvironment: 'jsdom',
   testEnvironmentOptions: {resources: 'usable'},
+  testTimeout: 10000,
 }

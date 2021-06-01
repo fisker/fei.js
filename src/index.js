@@ -22,14 +22,8 @@ async function processor(input, options = {}) {
     return input
   }
 
-  const {
-    fixOrientation,
-    quality,
-    maxWidth,
-    maxHeight,
-    always,
-    preferSmaller,
-  } = options
+  const {fixOrientation, quality, maxWidth, maxHeight, always, preferSmaller} =
+    options
 
   const orientation =
     fixOrientation && isJPEG(type) ? await getOrientation(input) : 0

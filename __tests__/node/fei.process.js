@@ -28,11 +28,11 @@ describe('lib', () => {
 })
 
 describe('should fix orientation', () => {
-  fixtures.forEach((fixture) => {
+  for (const fixture of fixtures) {
     const {name, orientation} = fixture
 
     if (!orientation) {
-      return
+      continue
     }
 
     let width = 600
@@ -54,7 +54,7 @@ describe('should fix orientation', () => {
       const {naturalWidth, naturalHeight} = await asImage(fixture)
       expect([naturalWidth, naturalHeight].join('x')).toBe(targetSize)
     })
-  })
+  }
 
   test('image_5.jpg should not reach width limit', async () => {
     const {naturalWidth, naturalHeight} = await asImage(fixtures[4], {

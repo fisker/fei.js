@@ -42,7 +42,6 @@ for (const fixture of fixtures) {
     timeCell.textContent = `${(window.performance.now() - startTime).toFixed(
       2
     )}ms`
-    // eslint-disable-next-line node/no-unsupported-features/node-builtins
     const url = window.URL.createObjectURL(processed)
     const newImage = await loadImage(url)
     processedCell.appendChild(newImage)

@@ -12,7 +12,9 @@ module.exports = {
   parserOptions: {},
   extends: ['@fisker', '@fisker/jest'],
   settings: {},
-  rules: {},
+  rules: {
+    'unicorn/prefer-node-protocol': 'off',
+  },
   plugins: [],
   globals: {
     window: true,
