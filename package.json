@@ -70,7 +70,7 @@
     "del-cli": "3.0.1",
     "eslint": "7.27.0",
     "husky": "6.0.0",
-    "jest": "27.0.3",
+    "jest": "27.0.4",
     "jpeg-buffer-orientation": "3.0.0",
     "jsdom": "16.6.0",
     "lint-staged": "11.0.0",
