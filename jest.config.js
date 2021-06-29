@@ -5,5 +5,5 @@ module.exports = {
   testRegex: ['__tests__/node/.*.js'],
   testEnvironment: 'jsdom',
   testEnvironmentOptions: {resources: 'usable'},
-  testTimeout: 10000,
+  testTimeout: 10_000,
 }
