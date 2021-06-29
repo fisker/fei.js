@@ -1,7 +1,7 @@
 import {JPEG_MIME} from '../constants'
 
-function isJPEG(mime) {
+function isJpeg(mime) {
   return mime === JPEG_MIME
 }
 
-export default isJPEG
+export default isJpeg

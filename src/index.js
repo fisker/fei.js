@@ -1,5 +1,5 @@
 import isImage from './helpers/is-image-type'
-import isJPEG from './helpers/is-jpeg-type'
+import isJpeg from './helpers/is-jpeg-type'
 import getOrientation from './helpers/get-orientation-from-blob'
 import blobToImage from './helpers/blob-to-image'
 import getImageTransformInfo from './helpers/get-image-transform-info'
@@ -26,7 +26,7 @@ async function processor(input, options = {}) {
     options
 
   const orientation =
-    fixOrientation && isJPEG(type) ? await getOrientation(input) : 0
+    fixOrientation && isJpeg(type) ? await getOrientation(input) : 0
   const image = await blobToImage(input)
   const {width, height} = getImageSize(image)
 
