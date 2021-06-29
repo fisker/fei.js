@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sending webhook to Coveralls
-        uses: coverallsapp/github-action@v1
+        uses: coverallsapp/github-action@master
         continue-on-error: true
         with:
           github-token: ${{ secrets.github_token }}
