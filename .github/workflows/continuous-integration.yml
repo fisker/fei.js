@@ -50,7 +50,7 @@ jobs:
         run: yarn test-coverage
 
       - name: Upload Coverage
-        uses: coverallsapp/github-action@v1
+        uses: coverallsapp/github-action@master
         if: success()
         continue-on-error: true
         with:
