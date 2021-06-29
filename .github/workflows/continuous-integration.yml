@@ -30,10 +30,10 @@ jobs:
     # needs: [build]
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
 
       - name: Setup Node.js
-        uses: actions/setup-node@master
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node_version }}
 
@@ -50,7 +50,7 @@ jobs:
         run: yarn test-coverage
 
       - name: Upload Coverage
-        uses: coverallsapp/github-action@master
+        uses: coverallsapp/github-action@v1
         if: success()
         continue-on-error: true
         with:
@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sending webhook to Coveralls
-        uses: coverallsapp/github-action@master
+        uses: coverallsapp/github-action@v1
         continue-on-error: true
         with:
           github-token: ${{ secrets.github_token }}
@@ -73,10 +73,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
 
       - name: Setup Node.js
-        uses: actions/setup-node@master
+        uses: actions/setup-node@v2
 
       - name: Install Dependencies
         run: yarn
@@ -89,10 +89,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
 
       - name: Setup Node.js
-        uses: actions/setup-node@master
+        uses: actions/setup-node@v2
 
       - name: Install Dependencies
         run: yarn
@@ -101,7 +101,7 @@ jobs:
         run: yarn build
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v2
         with:
           name: dist
           path: dist
