@@ -72,7 +72,7 @@
     "eslint": "7.32.0",
     "husky": "7.0.1",
     "jest": "27.0.6",
-    "jpeg-buffer-orientation": "3.0.1",
+    "jpeg-buffer-orientation": "4.0.0",
     "jsdom": "16.7.0",
     "lint-staged": "11.1.1",
     "markdownlint-cli": "0.28.1",
