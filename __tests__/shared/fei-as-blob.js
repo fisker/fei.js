@@ -1,4 +1,4 @@
-import toBlob from './fixture-to-blob'
+import toBlob from './fixture-to-blob.js'
 
 function processor(fei) {
   return (fixture, options) => {

@@ -1,5 +1,5 @@
-import feiAsBlob from './fei-as-blob'
-import blobToImage from '../../src/helpers/blob-to-image'
+import blobToImage from '../../src/helpers/blob-to-image.js'
+import feiAsBlob from './fei-as-blob.js'
 
 function processor(fei) {
   const asBlob = feiAsBlob(fei)
