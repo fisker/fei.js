@@ -1,5 +1,5 @@
-import {Promise, Image} from './global-this'
-import revoke from './revoke-url'
+import {Promise, Image} from './global-this.js'
+import revoke from './revoke-url.js'
 
 function loadImage(url) {
   return new Promise((resolve, reject) => {

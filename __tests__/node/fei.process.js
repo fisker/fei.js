@@ -1,7 +1,7 @@
-import fei from '../../src'
-import fixtures from '../shared/fixtures'
-import feiAsBlob from '../shared/fei-as-blob'
-import feiAsImage from '../shared/fei-as-image'
+import fei from '../../src/index.js'
+import fixtures from '../shared/fixtures.js'
+import feiAsBlob from '../shared/fei-as-blob.js'
+import feiAsImage from '../shared/fei-as-image.js'
 
 const asImage = feiAsImage(fei)
 const asBlob = feiAsBlob(fei)

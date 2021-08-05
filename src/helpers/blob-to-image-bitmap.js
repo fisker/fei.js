@@ -1,3 +1,3 @@
-import {createImageBitmap} from './global-this'
+import {createImageBitmap} from './global-this.js'
 
 export default createImageBitmap

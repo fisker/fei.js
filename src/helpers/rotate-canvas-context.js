@@ -1,4 +1,4 @@
-import degreeToAngle from './degree-to-angle'
+import degreeToAngle from './degree-to-angle.js'
 
 // https://github.com/buunguyen/exif-orient/blob/master/exif-orient.js
 function rotate(context, {width, height, degree, rotate}) {

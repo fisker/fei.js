@@ -1,7 +1,7 @@
-import flipContext from './flip-canvas-context'
-import rotateContext from './rotate-canvas-context'
-import getImageSize from './get-image-size'
-import createCanvas from './create-canvas'
+import flipContext from './flip-canvas-context.js'
+import rotateContext from './rotate-canvas-context.js'
+import getImageSize from './get-image-size.js'
+import createCanvas from './create-canvas.js'
 
 function toCanvas(
   image,

@@ -1,6 +1,6 @@
-import {SUPPORTS_OFFSCREEN_CANVAS} from '../supports'
-import dataURLToBlob from './dataurl-to-blob'
-import isFunction from './is-function'
+import {SUPPORTS_OFFSCREEN_CANVAS} from '../supports.js'
+import dataURLToBlob from './dataurl-to-blob.js'
+import isFunction from './is-function.js'
 
 function toBlob(canvas, {type, quality}) {
   return new Promise((resolve) => canvas.toBlob(resolve, type, quality))

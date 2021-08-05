@@ -1,3 +1,3 @@
-import {isFinite} from './global-this'
+import {isFinite} from './global-this.js'
 
 export default Math.isFinite || isFinite

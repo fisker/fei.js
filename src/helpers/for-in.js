@@ -1,4 +1,4 @@
-import hasOwn from './has-own'
+import hasOwn from './has-own.js'
 
 function forIn(object, iteratee) {
   for (const key in object) {

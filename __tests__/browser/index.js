@@ -1,5 +1,5 @@
-import fei from '../../src'
-import fixtures from '../shared/fixtures'
+import fei from '../../src/index.js'
+import fixtures from '../shared/fixtures.js'
 
 function loadImage(source) {
   return new Promise((resolve) => {
@@ -12,7 +12,7 @@ function loadImage(source) {
 const table = window.document.createElement('table')
 window.document.body.appendChild(table)
 table.innerHTML =
-  '<thead><tr><th>original</th><th>processed</th><th>time</th></tr></thead>'
+  '<thead><tr><th>original</th><th>processed</th><th>time</th></tr></thead>.js'
 const result = window.document.createElement('tbody')
 table.appendChild(result)
 
