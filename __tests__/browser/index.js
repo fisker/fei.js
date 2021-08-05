@@ -12,7 +12,7 @@ function loadImage(source) {
 const table = window.document.createElement('table')
 window.document.body.appendChild(table)
 table.innerHTML =
-  '<thead><tr><th>original</th><th>processed</th><th>time</th></tr></thead>.js'
+  '<thead><tr><th>original</th><th>processed</th><th>time</th></tr></thead>'
 const result = window.document.createElement('tbody')
 table.appendChild(result)
 
