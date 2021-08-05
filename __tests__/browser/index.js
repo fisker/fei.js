@@ -1,5 +1,5 @@
-import fei from '../../src'
-import fixtures from '../shared/fixtures'
+import fei from '../../src/index.js'
+import fixtures from '../shared/fixtures.js'
 
 function loadImage(source) {
   return new Promise((resolve) => {

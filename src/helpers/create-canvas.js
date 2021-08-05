@@ -1,5 +1,5 @@
-import {OffscreenCanvas, document} from './global-this'
-import {SUPPORTS_OFFSCREEN_CANVAS} from '../supports'
+import {SUPPORTS_OFFSCREEN_CANVAS} from '../supports.js'
+import {OffscreenCanvas, document} from './global-this.js'
 
 function createOffscreenCanvas(width, height) {
   return new OffscreenCanvas(width, height)

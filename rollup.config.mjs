@@ -1,4 +1,4 @@
-import babel from '@rollup/plugin-babel'
+import {babel} from '@rollup/plugin-babel'
 import resolve from '@rollup/plugin-node-resolve'
 import cjs from '@rollup/plugin-commonjs'
 import rollupPrettier from 'rollup-plugin-prettier'
@@ -29,6 +29,13 @@ const builds = {
       file: 'dist/index.js',
       format: 'umd',
       name: moduleName,
+      sourcemap: true,
+    },
+    // cjs build
+    {
+      file: 'dist/index.cjs',
+      format: 'cjs',
+      exports: 'auto',
       sourcemap: true,
     },
     // esm build

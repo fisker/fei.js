@@ -1,6 +1,6 @@
-import {SUPPORTS_REVOKE_OBJECT_URL} from '../supports'
-import {URL} from './global-this'
-import noop from './noop'
+import {SUPPORTS_REVOKE_OBJECT_URL} from '../supports.js'
+import {URL} from './global-this.js'
+import noop from './noop.js'
 
 function revokeObjectURL(url) {
   try {

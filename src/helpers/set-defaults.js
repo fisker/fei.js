@@ -1,4 +1,4 @@
-import defaults from '../defaults'
+import defaults from '../defaults.js'
 
 function setDefaults(options = {}) {
   return Object.assign(defaults, options)

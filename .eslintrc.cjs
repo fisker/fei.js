@@ -15,9 +15,18 @@ module.exports = {
   settings: {},
   rules: {},
   plugins: [],
-  globals: {
-    Uint8Array: false,
-    DataView: false,
-  },
-  overrides: [],
+  globals: {},
+  overrides: [
+    {
+      files: ['__tests__/**/*'],
+      extends: ['@fisker/jest'],
+      globals: {
+        __dirname: 'readonly',
+        __filename: 'readonly',
+      },
+      rules: {
+        'unicorn/prefer-node-protocol': 'off',
+      },
+    },
+  ],
 }

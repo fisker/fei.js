@@ -1,5 +1,5 @@
-import getImageSize from './get-image-size'
-import {isFinite} from './global-this'
+import getImageSize from './get-image-size.js'
+import {isFinite} from './global-this.js'
 
 function scaleLength(length, maxLength) {
   if (isFinite(maxLength) && maxLength >= 1) {

@@ -1,6 +1,6 @@
-import {URL, createImageBitmap, OffscreenCanvas} from './helpers/global-this'
-import isFunction from './helpers/is-function'
-import isObject from './helpers/is-object'
+import {URL, createImageBitmap, OffscreenCanvas} from './helpers/global-this.js'
+import isFunction from './helpers/is-function.js'
+import isObject from './helpers/is-object.js'
 
 const SUPPORTS_URL = isFunction(URL)
 

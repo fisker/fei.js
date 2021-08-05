@@ -1,5 +1,4 @@
-import mem from 'mem'
-import read from './read'
+import read from './read.js'
 
 function toBlob({name, file, type}) {
   const {buffer} = read(file)
@@ -8,4 +7,4 @@ function toBlob({name, file, type}) {
   })
 }
 
-export default mem(toBlob)
+export default toBlob
