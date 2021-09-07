@@ -40,7 +40,7 @@ for (const fixture of fixtures) {
       fixOrientation: true,
     })
     timeCell.textContent = `${(window.performance.now() - startTime).toFixed(
-      2
+      2,
     )}ms`
     const url = window.URL.createObjectURL(processed)
     const newImage = await loadImage(url)

@@ -5,12 +5,12 @@ import createCanvas from './create-canvas.js'
 
 function toCanvas(
   image,
-  {flipX = false, flipY = false, scale = 1, rotate = false, degree = 0} = {}
+  {flipX = false, flipY = false, scale = 1, rotate = false, degree = 0} = {},
 ) {
   const {width: imageWidth, height: imageHeight} = getImageSize(image)
 
   let [width, height] = [imageWidth, imageHeight].map((size) =>
-    Math.floor(Math.max(1, size * scale))
+    Math.floor(Math.max(1, size * scale)),
   )
 
   if (rotate) {
