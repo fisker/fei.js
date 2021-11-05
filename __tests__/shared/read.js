@@ -1,3 +1,1 @@
-import {readFileSync} from 'fs'
-
-export default readFileSync
+export {readFileSync as default} from 'fs'
