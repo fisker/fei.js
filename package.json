@@ -76,7 +76,7 @@
     "del-cli": "4.0.1",
     "eslint": "8.4.1",
     "husky": "7.0.4",
-    "jest": "27.4.4",
+    "jest": "27.4.5",
     "jpeg-buffer-orientation": "4.0.0",
     "jsdom": "19.0.0",
     "lint-staged": "12.1.2",
